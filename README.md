@@ -23,8 +23,13 @@ git remote add origin https://xxxx.git      //添加远程仓库地址
 git add *                       //添加文件夹下所有文件
 git remote https://xxxx         //设置远程仓库地址
 git commit -m "first"           //提交文件
-git push -u origin master       //上传文件
+git push -u origin master       //上传文件(一般要先同步远程仓库的代码到本地再push)
 ```
+
+
+> 如果出出现` ! [rejected] master -> master (non-fast-forward)`
+这个错误,先执行push,再执行然后再执行 ` git push --force origin master` 替换原先的`git push -u origin master`
+
 
 
 4.  依次使用这几个命令即完成所有的操作。即可将代码提交到初始化本地仓库,并将本地仓库的代码上传到远程仓库
